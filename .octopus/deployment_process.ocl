@@ -20,3 +20,20 @@ step "hello-world-using-powershell" {
         }
     }
 }
+
+step "script" {
+    name = "Script"
+    properties = {
+        Octopus.Action.TargetRoles = "role,web"
+    }
+
+    action {
+        properties = {
+            Foo = "foo"
+            Octopus.Action.RunOnServer = "false"
+            Octopus.Action.Template.Id = "ActionTemplates-1"
+            Octopus.Action.Template.Version = "2"
+        }
+        worker_pool_variable = ""
+    }
+}
