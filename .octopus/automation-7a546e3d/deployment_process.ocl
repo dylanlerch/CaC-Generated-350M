@@ -1,0 +1,11 @@
+step "step-6f344728" {
+    name = "step-6f344728"
+    properties = {
+        Octopus.Action.TargetRoles = "some-role"
+    }
+
+    action "action-03475c32" {
+        action_type = "Octopus.TestHarness.NoOp"
+        name = "action-03475c32"
+    }
+}
